@@ -34,4 +34,12 @@ body{
 }
 
 .button{
+  
+  margin: 0 auto;
   width: 50px;
+  border:none;
+  padding: 16px;
+  text-align: center
+}
+  width: 50px;
+
