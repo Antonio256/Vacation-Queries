@@ -11,8 +11,6 @@ $(document).ready(function() {
   $(".form-survey").on("submit", function(event) {
     event.preventDefault();
 
-
-
   //prevents the form from being submitted and moves on to the next code
 
     var array = [];
@@ -22,14 +20,8 @@ $(document).ready(function() {
 
 
     var age = Number($(this).find("input:radio[name='age']:checked").val());
-    if (age===1){
-      count_one.push(age);
-
-    }
-    else {
-      count_two.push(age);
-
-    }
+    if (age===1){count_one.push(age);}
+    else {count_two.push(age);}
     // stores the value of the input of the age bracket
 
     var gender = Number($(this).find("[name='gender']:checked").val());
@@ -40,8 +32,8 @@ $(document).ready(function() {
 
 
     var contactChannel= Number($(this).find("[name='contact_channel']:checked").val());
-    if (contactChannel===1){count_one.push(contactChannel);}
-    else { count_two.push(contactChannel);}
+    if (contact_channel===1){count_one.push(contact_channel);}
+    else { count_two.push(contact_channel);}
     // stores value of the input of contact channel
 
 
@@ -54,7 +46,7 @@ $(document).ready(function() {
 
     var incomeLevel = Number($(this).find("[name='incomeLevel']:checked").val());
     if (incomeLevel===1){count_one.push(incomeLevel);}
-    else  {count_two.push(incomeLevel);}
+    else  {count_two.push(incomeLevel);};
     // store the value of the input of income level
 
 
@@ -64,17 +56,19 @@ $(document).ready(function() {
     else  {count_two.push(activity);}
 
     //All questions are checked, now on to the deciding mode.
-
-
+    alert(count_one)
+  });
     if ((count_one.length) > (count_two.length)) {
       window.location.href = "seychelles.html";
+    //  $('.suggestion').append("You are destined for Seychelles");
       //If input buttons from occurances in value 1 are greater than those in value 2, re-direct user to destination
     }
      else if ((count_one.length) < (count_two.length)) {
       window.location.href = "uganda.html";
     }
-    else if((count_two.length) === (count_one.length)) {
+    else if((count_one.length) === (count_two.length)) {
       window.location.href = "barbados.html";
     }
   })
-});
+
+  });

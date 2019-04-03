@@ -1,8 +1,13 @@
 *{
   background-color: #ffff;
 }
-
-body{
+HTML {
+  background-image: url('../images/sipi.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.main{
   /* centering the  body and seeing the edges of the body contents, and all settings of the body*/
   margin: 0 auto;.
   padding: 10px;
@@ -34,4 +39,14 @@ body{
 }
 
 .button{
-  width: 50px;
+  margin: 0 auto;
+  width: 100px;
+  border:none;
+  padding: 16px;
+  text-align: center;
+  font-size: large;
+
+}
+.scene{
+  background-image: "sipi.jpeg";
+}
